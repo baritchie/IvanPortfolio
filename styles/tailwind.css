@@ -3,7 +3,70 @@
 @tailwind utilities;
 
 @layer utilities {
-  .change {
-    color: black;
-  }
+    body {
+        @apply text-gray-900;
+    }
+    h2 {
+        @apply font-quat text-3xl;
+    }
+    h3 {
+        @apply font-quatsans text-2xl;
+    }
+    sub {
+        @apply italic text-lg;
+    }
+    .exp-grid {
+        @apply p-10;
+    }
+    .exp-grid:nth-child(4n+1),
+    .exp-grid:nth-child(4n+3) {
+        @apply bg-lightblue text-white md:text-current;
+    }
+    .exp-grid:nth-child(4n+2),
+    .exp-grid:nth-child(4n+4) {
+        @apply bg-lightgreen text-gray-900 md:text-current;
+    }
+    .exp-grid:nth-child(4n+1),
+    .exp-grid:nth-child(4n+4) {
+        @apply md:bg-lightblue md:text-white;
+    }
+    .exp-grid:nth-child(4n+2),
+    .exp-grid:nth-child(4n+3) {
+        @apply md:bg-lightgreen;
+    }
+    .name-fade {
+    animation: animationFrames ease 2s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    animation-fill-mode: forwards; /*when the spec is finished*/
+    }
+    
+    .hero-fade {
+    animation: 3s ease 0s normal forwards 1 fadeIn;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        66% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes animationFrames {
+        0% {
+            opacity: 0;
+            transform: translate(0px, -25px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0px, 0px);
+        }
+    }
 }
