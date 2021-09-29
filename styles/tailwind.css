@@ -4,10 +4,16 @@
 
 @layer utilities {
     body {
-        @apply text-gray-900;
+        @apply text-gray-800;
+    }
+    a {
+        @apply text-white transition-colors duration-150;
+    }
+    a:hover {
+        @apply text-gray-800;
     }
     h2 {
-        @apply font-quat text-3xl;
+        @apply font-quat text-4xl border-b-2 border-black py-6 mb-6 w-max mx-auto;
     }
     h3 {
         @apply font-quatsans text-2xl;
@@ -18,21 +24,17 @@
     .exp-grid {
         @apply p-10;
     }
-    .exp-grid:nth-child(4n+1),
-    .exp-grid:nth-child(4n+3) {
-        @apply bg-lightblue text-white md:text-current;
+    .exp-grid:nth-of-type(2) {
+        @apply bg-lightgreen;
     }
-    .exp-grid:nth-child(4n+2),
-    .exp-grid:nth-child(4n+4) {
-        @apply bg-lightgreen text-gray-900 md:text-current;
+    .exp-grid:nth-of-type(3) {
+        @apply bg-lightblue md:bg-lightgreen;
     }
-    .exp-grid:nth-child(4n+1),
-    .exp-grid:nth-child(4n+4) {
-        @apply md:bg-lightblue md:text-white;
+    .exp-grid:nth-of-type(1) {
+        @apply bg-lightblue text-white;
     }
-    .exp-grid:nth-child(4n+2),
-    .exp-grid:nth-child(4n+3) {
-        @apply md:bg-lightgreen;
+    .exp-grid:nth-of-type(4) {
+        @apply bg-lightgreen md:bg-lightblue text-white;
     }
     .name-fade {
     animation: animationFrames ease 2s;

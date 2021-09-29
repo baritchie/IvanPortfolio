@@ -18,11 +18,23 @@ module.exports = {
                 quat: ['Quattrocento', 'serif'],
                 quatsans: ['Quattrocento Sans', 'sans-serif'],
             },
+            borderWidth: {
+                1: '1px',
+            },
+        },
+        container: {
+            screens: {
+                sm: "100%",
+                md: "100%",
+                lg: "1024px",
+                xl: "1280px"
+            }
         },
     },
     variants: {
         extend: {
-            backgroundColor: ['odd', 'even'],
+            borderRadius: ['hover', 'focus'],
+            backgroundColor: ['first', 'last', 'even', 'odd'],
         },
     },
     plugins: [],
